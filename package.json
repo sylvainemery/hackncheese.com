@@ -1,0 +1,34 @@
+{
+  "name": "hackncheese.com",
+  "version": "2.0.0",
+  "description": "Repository for the Hack N Cheese blog web site using the Eleventy static site generator.",
+  "author": "Sylvain Emery",
+  "license": "Unlicense",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint": "eslint '**/*.js' --no-error-on-unmatched-pattern",
+    "format": "prettier --write '**/*.{js,css,html,md,json}'",
+    "fix": "eslint --fix '**/*.js' --no-error-on-unmatched-pattern && prettier --write '**/*.{js,css,html,md,json}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylvainemery/hackncheese.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sylvainemery/hackncheese.com/issues"
+  },
+  "homepage": "https://github.com/sylvainemery/hackncheese.com#readme",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
