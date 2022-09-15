@@ -5,6 +5,9 @@
   "author": "Sylvain Emery",
   "license": "Unlicense",
   "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy --dryrun",
+    "build": "npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "lint": "eslint '**/*.js' --no-error-on-unmatched-pattern",
@@ -19,6 +22,9 @@
     "url": "https://github.com/sylvainemery/hackncheese.com/issues"
   },
   "homepage": "https://github.com/sylvainemery/hackncheese.com#readme",
+  "dependencies": {
+    "@11ty/eleventy": "2.0.0-canary.15"
+  },
   "devDependencies": {
     "eslint": "^8.23.1",
     "eslint-config-google": "^0.14.0",
