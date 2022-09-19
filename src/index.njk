@@ -1,0 +1,11 @@
+---
+layout: base
+title: Latest Posts
+---
+
+<h1>{{ title }}</h1>
+
+{% set postslist = collections.posts | head(-3) %}
+{% include "postslist.njk" %}
+
+<p>More posts can be found in <a href="{{ '/posts/' }}">the archive</a>.</p>

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    {% include "meta.njk" %}
+  </head>
+  <body>
+    {% include "header.njk" %}
+    <main>
+      {{ content | safe }}
+    </main>
+    {% include "footer.njk" %}
+    <!-- Current page: {{ page.url | htmlBaseUrl }} -->
+  </body>
+</html>
