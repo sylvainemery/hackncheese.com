@@ -1,5 +1,6 @@
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const eleventyRssPlugin = require('@11ty/eleventy-plugin-rss');
 const eleventySyntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const markdownIt = require('markdown-it');
@@ -15,6 +16,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyRssPlugin);
   eleventyConfig.addPlugin(eleventySyntaxHighlightPlugin);
 
   // Customize Markdown library and settings:
