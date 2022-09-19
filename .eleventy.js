@@ -1,5 +1,6 @@
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const eleventySyntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
@@ -14,6 +15,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventySyntaxHighlightPlugin);
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
@@ -44,6 +46,8 @@ module.exports = function (eleventyConfig) {
   Object.keys(shortcodes).forEach((shortcodeName) => {
     eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
   });
+
+  eleventyConfig.addPassthroughCopy({ 'src/assets/css': 'css' });
 
   return {
     templateFormats: ['md', 'njk', 'html', 'liquid'],
