@@ -1,3 +1,18 @@
 <header>
   <a href="{{ '/' }}">{{ metadata.title }}</a>
+  <nav class="nav" role="navigation" tabindex="-1">
+    <ul class="nav-menu">
+      {%- for item in collections.all | eleventyNavigation -%}
+        {%- if item.url -%}
+          {%- set isCurrent = (item.url == page.url) -%}
+          {%- set isParent = item.url != '/' and item.url in page.url -%}
+          <li class="nav-item{% if isCurrent or isParent %} nav-item-active{% endif %}">
+            <a class="nav-link" href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" {% if isCurrent %} aria-current="page" {% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </nav>
 </header>

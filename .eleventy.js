@@ -1,4 +1,5 @@
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
 const filters = require('./utils/filters.js');
 const transforms = require('./utils/transforms.js');
@@ -9,6 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('post', 'post.njk');
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Filters
   Object.keys(filters).forEach((filterName) => {
