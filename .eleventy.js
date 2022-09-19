@@ -1,6 +1,9 @@
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+
 const filters = require('./utils/filters.js');
 const transforms = require('./utils/transforms.js');
 const shortcodes = require('./utils/shortcodes.js');
@@ -11,6 +14,21 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  // Customize Markdown library and settings:
+  let markdownLibrary = markdownIt({
+    html: true,
+    linkify: true,
+  }).use(markdownItAnchor, {
+    permalink: markdownItAnchor.permalink.ariaHidden({
+      placement: 'after',
+      class: 'direct-link',
+      symbol: '#',
+    }),
+    level: [1, 2, 3, 4],
+    slugify: eleventyConfig.getFilter('slugify'),
+  });
+  eleventyConfig.setLibrary('md', markdownLibrary);
 
   // Filters
   Object.keys(filters).forEach((filterName) => {
