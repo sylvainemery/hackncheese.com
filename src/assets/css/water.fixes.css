@@ -1,0 +1,33 @@
+/*
+pre and code shouldn't have a different bgcolor
+*/
+pre > code {
+  background: inherit;
+}
+
+/*
+No need for a custom arrow (1), we want the default select appearance back (2)
+*/
+select {
+  /* 1 */
+  background: var(--background);
+  padding-right: 10px;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+input[type='range'],
+select,
+button,
+textarea {
+  -webkit-appearance: auto; /* 2 */
+}
+
+/*
+Missing customized highlight color
+*/
+input,
+button,
+textarea,
+select {
+  accent-color: var(--highlight);
+}

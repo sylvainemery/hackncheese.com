@@ -1,0 +1,23 @@
+:root {
+  --background-body: var(--nord00);
+  --background: var(--nord0);
+  --background-alt: var(--nord1);
+  --selection: var(--nord2);
+  --text-main: var(--nord4);
+  --text-bright: var(--nord5);
+  --text-muted: var(--nord3);
+  --links: var(--nord9);
+  --focus: var(--nord10);
+  --border: var(--nord3);
+  --code: var(--nord7);
+  --animation-duration: 0.1s;
+  --button-base: var(--nord2);
+  --button-hover: var(--nord3);
+  --scrollbar-thumb: var(--button-hover);
+  --scrollbar-thumb-hover: var(--nord2);
+  --form-placeholder: var(--nord3);
+  --form-text: var(--nord6);
+  --variable: var(--nord10);
+  --highlight: var(--nord10);
+  --select-arrow: ;
+}

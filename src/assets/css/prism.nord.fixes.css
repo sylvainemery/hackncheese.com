@@ -1,0 +1,77 @@
+/*
+ Rebase colors on variables
+ and custom font
+*/
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: var(--nord4);
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
+    monospace;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: var(--nord0);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--nord10);
+}
+
+.token.punctuation {
+  color: var(--nord9);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--nord9);
+}
+
+.token.number {
+  color: var(--nord15);
+}
+
+.token.boolean {
+  color: var(--nord9);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--nord14);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--nord9);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--nord8);
+}
+
+.token.keyword {
+  color: var(--nord9);
+}
+
+.token.regex,
+.token.important {
+  color: var(--nord13);
+}
