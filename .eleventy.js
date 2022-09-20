@@ -6,6 +6,11 @@ const eleventySyntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighl
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 
+const postcss = require('postcss');
+const postcssImport = require('postcss-import');
+const postcssAutoprefixer = require('autoprefixer');
+const postcssCsso = require('postcss-csso');
+
 const filters = require('./utils/filters.js');
 const transforms = require('./utils/transforms.js');
 const shortcodes = require('./utils/shortcodes.js');
@@ -49,7 +54,24 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
   });
 
-  eleventyConfig.addPassthroughCopy({ 'src/assets/css': 'css' });
+  eleventyConfig.addExtension('css', {
+    outputFileExtension: 'css',
+    compile: async (inputContent, inputPath) => {
+      if (inputPath !== './src/assets/css/main.css') {
+        return;
+      }
+
+      return async () => {
+        let output = await postcss([
+          postcssImport,
+          postcssAutoprefixer,
+          postcssCsso,
+        ]).process(inputContent, { from: inputPath });
+
+        return output.css;
+      };
+    },
+  });
 
   return {
     templateFormats: ['md', 'njk', 'html', 'liquid'],
