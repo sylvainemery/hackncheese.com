@@ -8,7 +8,7 @@ layout: base
     <time itemprop="datePublished" class="dt-published" datetime="{{ page.date | dateToFormat('yyyy-MM-dd') }}">{{ page.date | dateToFormat('DDD') }}</time>
     by
     <address itemprop="author" class="p-author h-card" itemscope itemtype="https://schema.org/Person">
-      <a href="{{ metadata.author.url }}" rel="author" itemprop="name" class="p-name" tabindex="-1">{{ metadata.author.name }}</a>
+      <a href="{{ metadata.author.url | htmlBaseUrl }}" rel="author" itemprop="name" class="p-name" tabindex="-1">{{ metadata.author.name }}</a>
     </address>
   </div>
   <div itemprop="articleBody" class="e-content">{{ content | safe }}</div>
