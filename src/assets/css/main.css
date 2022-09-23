@@ -93,3 +93,21 @@ body > footer {
   z-index: 1;
   text-decoration: none;
 }
+
+.postmeta {
+  font-style: italic;
+}
+.postmeta time {
+  padding: unset;
+  color: unset;
+  font-size: unset;
+  border-radius: unset;
+  background: unset;
+}
+.postmeta address {
+  display: contents;
+  font-style: inherit;
+}
+.postmeta a {
+  color: unset;
+}

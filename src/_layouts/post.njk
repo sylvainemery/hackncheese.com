@@ -2,20 +2,33 @@
 layout: base
 ---
 
-<h1>{{ title }}</h1>
-
-<time datetime="{{ page.date | dateToFormat('yyyy-MM-dd') }}">{{ page.date | dateToFormat('yyyy-MM-dd') }}</time>
-
-{{ content | safe }}
-
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 itemprop="headline">{{ title }}</h1>
+  <div class="postmeta">Published on
+    <time itemprop="datePublished" datetime="{{ page.date | dateToFormat('yyyy-MM-dd') }}">{{ page.date | dateToFormat('DDD') }}</time>
+    by
+    <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <a href="{{ metadata.author.url }}" itemprop="name" tabindex="-1">{{ metadata.author.name }}</a>
+    </address>
+  </div>
+  <div itemprop="articleBody">{{ content | safe }}</div>
+</article>
 {%- if collections.posts %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- if nextPost or previousPost %}
-<hr/>
-<ul>
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
+  {%- set nextPost = collections.posts | getNextCollectionItem %}
+  {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+  {%- if nextPost or previousPost %}
+    <hr/>
+    <ul>
+      {%- if nextPost %}
+        <li>Next:
+          <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        </li>
+      {% endif %}
+      {%- if previousPost %}
+        <li>Previous:
+          <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        </li>
+      {% endif %}
+    </ul>
+  {%- endif %}
 {%- endif %}
