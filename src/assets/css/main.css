@@ -73,3 +73,23 @@ footer {
 body > footer {
   margin-top: 24px;
 }
+
+.skiplink {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.skiplink:focus {
+  border-radius: 4px;
+  clip: auto;
+  color: var(--text-main);
+  height: auto;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  width: auto;
+  z-index: 1;
+  text-decoration: none;
+}
