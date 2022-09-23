@@ -8,6 +8,8 @@
     "start": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy --dryrun",
     "build": "npx @11ty/eleventy",
+    "servebuild": "npx @11ty/eleventy && npx serve ./_site/",
+    "clean": "rm -rf ./_site",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "lint": "eslint '**/*.js' --no-error-on-unmatched-pattern",
