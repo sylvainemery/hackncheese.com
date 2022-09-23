@@ -43,3 +43,7 @@ https://stackoverflow.com/a/32570813
 .nav-item-active {
   font-weight: bold;
 }
+
+.postlist-link > h2 {
+  display: contents;
+}
