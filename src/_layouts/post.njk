@@ -2,16 +2,16 @@
 layout: base
 ---
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-  <h1 itemprop="headline">{{ title }}</h1>
+<article itemscope itemtype="http://schema.org/BlogPosting" class="h-entry">
+  <h1 itemprop="headline" class="p-name">{{ title }}</h1>
   <div class="postmeta">Published on
-    <time itemprop="datePublished" datetime="{{ page.date | dateToFormat('yyyy-MM-dd') }}">{{ page.date | dateToFormat('DDD') }}</time>
+    <time itemprop="datePublished" class="dt-published" datetime="{{ page.date | dateToFormat('yyyy-MM-dd') }}">{{ page.date | dateToFormat('DDD') }}</time>
     by
-    <address itemprop="author" itemscope itemtype="https://schema.org/Person">
-      <a href="{{ metadata.author.url }}" itemprop="name" tabindex="-1">{{ metadata.author.name }}</a>
+    <address itemprop="author" class="p-author h-card" itemscope itemtype="https://schema.org/Person">
+      <a href="{{ metadata.author.url }}" rel="author" itemprop="name" class="p-name" tabindex="-1">{{ metadata.author.name }}</a>
     </address>
   </div>
-  <div itemprop="articleBody">{{ content | safe }}</div>
+  <div itemprop="articleBody" class="e-content">{{ content | safe }}</div>
 </article>
 {%- if collections.posts %}
   {%- set nextPost = collections.posts | getNextCollectionItem %}
