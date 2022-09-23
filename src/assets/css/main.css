@@ -10,7 +10,7 @@
 @import './vendor/prism-nord.css';
 @import './prism.nord.fixes.css';
 
-header {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,4 +46,30 @@ https://stackoverflow.com/a/32570813
 
 .postlist-link > h2 {
   display: contents;
+}
+
+/* Direct Links / Markdown Headers */
+.direct-link {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  margin-left: 0.1em;
+}
+a[href].direct-link,
+a[href].direct-link:visited {
+  color: transparent;
+}
+a[href].direct-link:focus,
+a[href].direct-link:focus:visited,
+:hover > a[href].direct-link,
+:hover > a[href].direct-link:visited {
+  color: var(--links);
+}
+
+footer {
+  padding-top: 0;
+}
+
+body > footer {
+  margin-top: 24px;
 }

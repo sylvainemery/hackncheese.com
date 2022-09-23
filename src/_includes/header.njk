@@ -1,6 +1,6 @@
 <header>
+  <nav class="nav" tabindex="-1">
   <a href="{{ '/' }}">{{ metadata.title }}</a>
-  <nav role="navigation" tabindex="-1">
     <ul class="nav-menu">
       {%- for item in collections.all | eleventyNavigation -%}
         {%- if item.url -%}
