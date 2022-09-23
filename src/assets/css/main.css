@@ -9,3 +9,37 @@
 
 @import './vendor/prism-nord.css';
 @import './prism.nord.fixes.css';
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  margin-left: 24px;
+}
+/*
+Used to keep each nav item the same size even when selected (and bold)
+https://stackoverflow.com/a/32570813
+*/
+.nav-item::after {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 1px;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.nav-item-active {
+  font-weight: bold;
+}

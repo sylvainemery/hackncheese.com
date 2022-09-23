@@ -2,7 +2,7 @@
 layout: base
 eleventyNavigation:
   key: About
-  order: 3
+  order: 1
 ---
 
 # About me
