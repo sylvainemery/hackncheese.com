@@ -51,7 +51,7 @@ module.exports = function (eleventyConfig) {
 
   // Shortcodes
   Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+    eleventyConfig.addAsyncShortcode(shortcodeName, shortcodes[shortcodeName]);
   });
 
   eleventyConfig.addTemplateFormats('css');
@@ -72,6 +72,11 @@ module.exports = function (eleventyConfig) {
         return output.css;
       };
     },
+  });
+
+  eleventyConfig.addPassthroughCopy({ 'src/assets/fonts': 'assets/fonts' });
+  eleventyConfig.addPassthroughCopy({
+    'src/assets/img/logo': 'assets/img/logo',
   });
 
   return {

@@ -16,6 +16,9 @@
   justify-content: space-between;
   margin-bottom: 24px;
 }
+.nav > * {
+  align-self: baseline;
+}
 
 .nav-menu {
   display: flex;
@@ -110,4 +113,22 @@ body > footer {
 }
 .postmeta a {
   color: unset;
+}
+
+@font-face {
+  font-family: 'hackncheese';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/hackncheese.woff') format('woff2');
+  font-display: swap;
+}
+.logo {
+  font-family: 'hackncheese', sans-serif;
+  font-size: 1.4em;
+}
+.logo:link,
+.logo:visited,
+.logo:hover,
+.logo:active {
+  text-decoration: none;
 }

@@ -10,6 +10,10 @@ module.exports = {
         base: '_site',
         html: content,
         inline: true,
+        rebase: {
+          from: '/assets/css/main.css',
+          to: '/index.html',
+        },
       });
       return html;
     }
