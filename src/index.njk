@@ -1,10 +1,9 @@
 ---
 layout: base
-title: Latest Posts
 ---
 <p>{{ metadata.description }}</p>
 
-<h1>{{ title }}</h1>
+<h1>Latest Posts</h1>
 
 {% set postslist = collections.posts | head(-3) %}
 {% include "postslist.njk" %}

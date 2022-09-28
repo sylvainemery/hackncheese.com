@@ -1,16 +1,38 @@
 {%- set absolutePageUrl -%}{{ metadata.url }}{{ page.url | htmlBaseUrl }}{%- endset -%}
+{%- set zeDescription -%}{{ excerpt or metadata.description }}{%- endset -%}
+
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>{% if title %}{{ title }} - {% endif %}{{ metadata.title }}</title>
 <meta name="author" content="{{ metadata.author.name }}"/>
-<meta name="description" content="{{ description or metadata.description }}"/>
+<meta name="description" content="{{ zeDescription }}"/>
+
 <link rel="canonical" href="{{ absolutePageUrl }}"/>
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+<link rel="alternate" type="application/rss+xml" title="{{ metadata.title }} - RSS" href="/atom.xml">
+
+
+<link rel="me" href="https://github.com/sylvainemery">
+<link rel="me" href="https://twitter.com/sylvainemery">
+<link rel="me" href="https://www.linkedin.com/in/sylvainemery/">
+
 
 <!-- favicons -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ absolutePageUrl }}">
+<meta property="og:title" content="{{ metadata.title }}">
+<meta property="og:description" content="{{ zeDescription }}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary">
+<meta property="twitter:url" content="{{ absolutePageUrl }}">
+<meta property="twitter:title" content="{{ metadata.title }}">
+<meta property="twitter:description" content="{{ zeDescription }}">
 
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#242933">
