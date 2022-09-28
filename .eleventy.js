@@ -2,6 +2,7 @@ const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const eleventyRssPlugin = require('@11ty/eleventy-plugin-rss');
 const eleventySyntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight');
+const eleventyYoutubeEmbedPlugin = require('eleventy-plugin-youtube-embed');
 
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
@@ -23,6 +24,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyRssPlugin);
   eleventyConfig.addPlugin(eleventySyntaxHighlightPlugin);
+  eleventyConfig.addPlugin(eleventyYoutubeEmbedPlugin, {
+    lite: true,
+    modestBranding: true,
+    recommendSelfOnly: true,
+  });
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({

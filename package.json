@@ -32,6 +32,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "autoprefixer": "^10.4.11",
     "critical": "^5.0.2",
+    "eleventy-plugin-youtube-embed": "^1.7.1",
     "html-minifier": "^4.0.0",
     "luxon": "^3.0.3",
     "markdown-it": "^13.0.1",
