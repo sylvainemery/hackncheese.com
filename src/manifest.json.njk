@@ -1,0 +1,23 @@
+---
+permalink: manifest.json
+---
+{
+  "short_name": "{{ metadata.title | safe }}",
+  "name": "{{ metadata.title | safe }}",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }, {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "display": "minimal-ui",
+  "background_color": "#242933",
+  "theme_color": "#242933"
+}

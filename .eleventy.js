@@ -78,6 +78,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     'src/assets/img/logo': 'assets/img/logo',
   });
+  eleventyConfig.addPassthroughCopy({ 'src/assets/img/favicons': '/' });
 
   return {
     templateFormats: ['md', 'njk', 'html', 'liquid'],
