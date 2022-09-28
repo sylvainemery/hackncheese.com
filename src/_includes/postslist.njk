@@ -2,7 +2,7 @@
 {% for post in postslist | reverse %}
   <li>
     <a href="{{ post.url }}" class="postlist-link"><h2>{{ post.data.title }}</h2></a>
-    <time datetime="{{ post.date | dateToFormat('yyyy-MM-dd') }}">{{ post.date | dateToFormat('yyyy-MM-dd') }}</time>
+    <time class="postlist-date" datetime="{{ post.date | dateToFormat('yyyy-MM-dd') }}">{{ post.date | dateToFormat('yyyy-MM-dd') }}</time>
     <p>{{ post.data.excerpt }}</p>
   </li>
 {% endfor %}

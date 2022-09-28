@@ -50,6 +50,9 @@ https://stackoverflow.com/a/32570813
 .postlist-link > h2 {
   display: contents;
 }
+.postlist-date {
+  vertical-align: text-bottom;
+}
 
 /* Direct Links / Markdown Headers */
 .direct-link {
