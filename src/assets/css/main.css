@@ -71,6 +71,9 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link:visited {
   color: var(--links);
 }
+.heading-wrapper > * {
+  display: inline;
+}
 
 footer {
   padding-top: 0;

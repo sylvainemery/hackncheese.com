@@ -29,10 +29,13 @@ module.exports = function (eleventyConfig) {
     html: true,
     linkify: true,
   }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
+    permalink: markdownItAnchor.permalink.linkAfterHeader({
       placement: 'after',
       class: 'direct-link',
       symbol: '#',
+      style: 'aria-label',
+      assistiveText: (title) => `Permalink to “${title}”`,
+      wrapper: ['<div class="heading-wrapper">', '</div>'],
     }),
     level: [1, 2, 3, 4],
     slugify: eleventyConfig.getFilter('slugify'),
