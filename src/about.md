@@ -17,8 +17,7 @@ You can find me on <a rel="me" href="https://github.com/sylvainemery/">GitHub</a
 
 ## About this site
 
-This site was initially built in 2014 with [Jekyll](https://jekyllrb.com/), [Poole](https://getpoole.com/) and its [Hyde theme](https://hyde.getpoole.com/). It used Google+ Comments ([RIP](https://blog.google/technology/safety-security/expediting-changes-google-plus/)). It was hosted on [GitHub Pages](https://pages.github.com/).
+This site was initially built in 2014 with [Jekyll](https://jekyllrb.com/), [Poole](https://getpoole.com/) and its [Hyde theme](https://hyde.getpoole.com/). It used Google+ Comments ([RIP](https://blog.google/technology/safety-security/expediting-changes-google-plus/)). It was hosted on [GitHub Pages](https://pages.github.com/), and the source code is in the [sylvainemery.github.io repo](https://github.com/sylvainemery/sylvainemery.github.io) on GitHub.
 
 In 2022, I decided to rebuild everything with [Eleventy](https://www.11ty.dev/). It is more modern, but also more involving because it has more options. Migrating took me longer than expected because I learned a few things in the front-end side since 2014, and I wanted to score 4 hundreds in Lighthouse.
-
-Everything is in a [public repo]({{ metadata.repoUrl }}) on GitHub.
+It is now hosted on [Cloudflare Pages](https://pages.cloudflare.com/). The code is in the [hackncheese.com repo](https://github.com/sylvainemery/hackncheese.com) on GitHub.
