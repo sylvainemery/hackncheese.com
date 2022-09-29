@@ -1,4 +1,5 @@
 ---
+title: About
 layout: base
 eleventyNavigation:
   key: About
