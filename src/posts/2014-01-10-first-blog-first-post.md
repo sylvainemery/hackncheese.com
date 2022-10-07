@@ -10,7 +10,7 @@ This blog and this post are long overdue. I thought about starting blogging seve
 I've bought a [Raspberry Pi](http://www.raspberrypi.org/) when it was announced. Like many of my other geeky stuff, I've turned it on for a day or two, and then it has collected dust in a drawer.
 
 But one day, I wanted to hack on a particular project. Because it's easily portable and doesn't draw too much electricity, my raspi was a great platform to build on.
-(if you're curious about what this project is, it's an [iBeacon](http://en.wikipedia.org/wiki/IBeacon) and will soon be described on this blog) _Update: here is my [PiBeacon post](/2014/01/28/PiBeacon)._
+(if you're curious about what this project is, it's an [iBeacon](http://en.wikipedia.org/wiki/IBeacon) and will soon be described on this blog) _Update: here is my [PiBeacon post](/2014/01/28/PiBeacon/)._
 
 Since this first project, I've found other stuff to hack about, regarding one of my hobbies: home automation.
 
