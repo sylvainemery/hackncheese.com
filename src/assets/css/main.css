@@ -71,16 +71,26 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link:visited {
   color: var(--links);
 }
+.heading-wrapper {
+  margin-block: 2em 1em;
+}
 .heading-wrapper > * {
   display: inline;
+}
+
+article {
+  margin-bottom: 48px;
 }
 
 footer {
   padding-top: 0;
 }
 
+.nextprevious {
+  margin-bottom: -24px;
+}
 body > footer {
-  margin-top: 24px;
+  margin-top: 48px;
 }
 
 .skiplink {

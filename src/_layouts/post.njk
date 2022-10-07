@@ -18,7 +18,7 @@ layout: base
   {%- set previousPost = collections.posts | getPreviousCollectionItem %}
   {%- if nextPost or previousPost %}
     <hr/>
-    <ul>
+    <ul class="nextprevious">
       {%- if nextPost %}
         <li>Next:
           <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
